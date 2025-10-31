@@ -204,9 +204,22 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex gap-4 mt-12"
         >
+          {/* X (Twitter) */}
+          <a
+            href="https://x.com/SolCircle_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 rounded-lg hover:bg-white/20 transition-all group"
+            aria-label="X (Twitter)"
+          >
+            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+
           {/* Telegram */}
           <a
-            href="https://t.me/solcircle"
+            href="https://t.me/+JuO7Xwj6aHY4Zjc9"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 rounded-lg hover:bg-white/20 transition-all group"
@@ -219,7 +232,7 @@ export default function Home() {
 
           {/* GitHub */}
           <a
-            href="https://github.com/solcircle"
+            href="https://github.com/SolCircle-in"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 rounded-lg hover:bg-white/20 transition-all group"
@@ -232,7 +245,7 @@ export default function Home() {
 
           {/* Email */}
           <a
-            href="mailto:hello@solcircle.io"
+            href="solcircleindia@gmail.com"
             className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 rounded-lg hover:bg-white/20 transition-all group"
             aria-label="Email"
           >
