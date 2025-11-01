@@ -60,13 +60,13 @@ export default function Home() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-16">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20 md:py-24">
         {/* Logo and Brand Section */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center mb-12"
+          className="flex flex-col items-center mb-12 mt-8 md:mt-0"
         >
           <div className="mb-6">
             <Image

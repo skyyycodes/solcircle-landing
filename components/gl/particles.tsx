@@ -60,7 +60,7 @@ export function Particles({
     m.uniforms.initialPositions.value =
       simulationMaterial.uniforms.positions.value;
     return m;
-  }, [simulationMaterial]);
+  }, [simulationMaterial, target.texture]);
 
   const [scene] = useState(() => new THREE.Scene());
   const [camera] = useState(

@@ -11,12 +11,16 @@
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
     "@splinetool/react-spline": "^4.1.0",
     "framer-motion": "^12.23.24",
+    "leva": "^0.10.0",
     "lucide-react": "^0.546.0",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.158.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^10.1.0",
