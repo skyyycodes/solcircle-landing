@@ -2,8 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Wallet, Vote, Shield, Trophy, BarChart3, Link2 } from 'lucide-react';
+import { GL } from './gl';
 
 const features = [
   {
@@ -47,10 +48,15 @@ const features = [
 export default function CoreFeatures() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const [hovering, setHovering] = useState(false);
 
   return (
-  <section ref={ref} className="relative py-32 px-6 bg-black">
-      <div className="max-w-7xl mx-auto">
+  <section ref={ref} className="relative py-32 px-6 bg-black overflow-hidden">
+      {/* Particle Background */}
+      <div className="absolute inset-0 z-0">
+        <GL hovering={hovering} />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -75,9 +81,11 @@ export default function CoreFeatures() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
             >
               {/* Card */}
-              <div className="relative h-full bg-zinc-950 rounded-3xl p-8 border border-zinc-900 hover:border-zinc-800 transition-all duration-300">
+              <div className="relative h-full bg-zinc-950/80 backdrop-blur-sm rounded-3xl p-8 border border-zinc-900 hover:border-zinc-800 transition-all duration-300">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center bg-zinc-900 border border-zinc-800`}>
